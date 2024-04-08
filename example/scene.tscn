@@ -48,9 +48,7 @@ border_color = Color(0, 0, 0, 0.501961)
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="Demo" type="Node"]
-
-[node name="Margin" type="MarginContainer" parent="."]
+[node name="Example" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -61,17 +59,17 @@ theme_override_constants/margin_top = 64
 theme_override_constants/margin_right = 64
 theme_override_constants/margin_bottom = 64
 
-[node name="Box" type="HBoxContainer" parent="Margin"]
+[node name="Box" type="HBoxContainer" parent="."]
 layout_mode = 2
 theme_override_constants/separation = 64
 
-[node name="Left" type="VBoxContainer" parent="Margin/Box"]
+[node name="Left" type="VBoxContainer" parent="Box"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/separation = 32
 
-[node name="Title" type="Label" parent="Margin/Box/Left"]
+[node name="Title" type="Label" parent="Box/Left"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
@@ -80,7 +78,7 @@ text = "RangeContainer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RangeContainer" type="ScrollContainer" parent="Margin/Box/Left" node_paths=PackedStringArray("shared_v")]
+[node name="RangeContainer" type="ScrollContainer" parent="Box/Left" node_paths=PackedStringArray("shared_v")]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_8qgki")
@@ -88,7 +86,7 @@ script = ExtResource("1_keqt5")
 shared_v = [NodePath("../../Box/Container/Box/Box/VScrollBar"), NodePath("../../Box/Container/Box/Box/VSlider"), NodePath("../../Box/Container/Box/Box/TextureProgressBar"), NodePath("../../Box/Container/Box/HSlider"), NodePath("../../Box/Container/Box/HScrollBar"), NodePath("../../Box/Container/Box/SpinBox"), NodePath("../../Box/Container/Box/ProgressBar")]
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="Margin/Box/Left/RangeContainer"]
+[node name="Label" type="Label" parent="Box/Left/RangeContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -113,12 +111,12 @@ Ullus investigandi veri, nisi inveneris, et quaerendi defatigatio turpis est, cu
 Ullus investigandi veri, nisi inveneris, et quaerendi defatigatio turpis est, cum esset accusata et vituperata ab Hortensio. Qui liber cum et mortem contemnit, qua qui est imbutus quietus esse numquam potest. Praeterea bona praeterita grata recordatione renovata delectant."
 autowrap_mode = 2
 
-[node name="Box" type="VBoxContainer" parent="Margin/Box"]
+[node name="Box" type="VBoxContainer" parent="Box"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="Margin/Box/Box"]
+[node name="Label" type="Label" parent="Box/Box"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_ipgr5")
@@ -126,32 +124,32 @@ text = "Range Nodes"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Container" type="PanelContainer" parent="Margin/Box/Box"]
+[node name="Container" type="PanelContainer" parent="Box/Box"]
 custom_minimum_size = Vector2(0, 360)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_nwcxb")
 
-[node name="Box" type="VBoxContainer" parent="Margin/Box/Box/Container"]
+[node name="Box" type="VBoxContainer" parent="Box/Box/Container"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Box" type="HBoxContainer" parent="Margin/Box/Box/Container/Box"]
+[node name="Box" type="HBoxContainer" parent="Box/Box/Container/Box"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 12
 
-[node name="VScrollBar" type="VScrollBar" parent="Margin/Box/Box/Container/Box/Box"]
+[node name="VScrollBar" type="VScrollBar" parent="Box/Box/Container/Box/Box"]
 layout_mode = 2
 max_value = 2025.0
 page = 392.0
 
-[node name="VSlider" type="VSlider" parent="Margin/Box/Box/Container/Box/Box"]
+[node name="VSlider" type="VSlider" parent="Box/Box/Container/Box/Box"]
 layout_mode = 2
 max_value = 1633.0
 step = 0.0
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Margin/Box/Box/Container/Box/Box"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Box/Box/Container/Box/Box"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
@@ -162,19 +160,19 @@ texture_under = ExtResource("2_8du0b")
 texture_progress = ExtResource("2_8du0b")
 tint_under = Color(0.1, 0.1, 0.1, 0.25098)
 
-[node name="HSlider" type="HSlider" parent="Margin/Box/Box/Container/Box"]
+[node name="HSlider" type="HSlider" parent="Box/Box/Container/Box"]
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1633.0
 step = 0.0
 
-[node name="HScrollBar" type="HScrollBar" parent="Margin/Box/Box/Container/Box"]
+[node name="HScrollBar" type="HScrollBar" parent="Box/Box/Container/Box"]
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 2025.0
 page = 392.0
 
-[node name="SpinBox" type="SpinBox" parent="Margin/Box/Box/Container/Box"]
+[node name="SpinBox" type="SpinBox" parent="Box/Box/Container/Box"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
@@ -182,7 +180,7 @@ max_value = 2025.0
 step = 0.0
 page = 392.0
 
-[node name="ProgressBar" type="ProgressBar" parent="Margin/Box/Box/Container/Box"]
+[node name="ProgressBar" type="ProgressBar" parent="Box/Box/Container/Box"]
 layout_mode = 2
 max_value = 1633.0
 step = 0.0
