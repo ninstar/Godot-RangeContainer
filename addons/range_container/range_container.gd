@@ -27,10 +27,10 @@ class_name RangeContainer extends ScrollContainer
 ## A [ScrollContainer] that can be controlled by external [Range] nodes.
 
 
-## A list of [Range] nodes bound to the [HScrollBar] of the container.
+## [Range] node bound to the [HScrollBar] of the container.
 @export var shared_h: Array[Range]: get = get_shared_h, set = set_shared_h 
 
-## A list of [Range] nodes bound to the [VScrollBar] of the container.
+## [Range] node bound to the [VScrollBar] of the container.
 @export var shared_v: Array[Range]: get = get_shared_v, set = set_shared_v
 
 
