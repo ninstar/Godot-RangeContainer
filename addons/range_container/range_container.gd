@@ -54,10 +54,12 @@ var __tween: Tween
 #region Signals
 
 func __on_scroll_bar_changed(scroll_bar: ScrollBar) -> void:
-	for range: Node in (shared_horizontal_range if scroll_bar == HScrollBar else shared_vertical_range):
+	for node: Node in (shared_horizontal_range if scroll_bar == HScrollBar else shared_vertical_range):
+		var range := node as Range
+		
 		if is_instance_valid(range):
 			if range is ScrollBar:
-				range.custom_step = scroll_bar.custom_step
+				(range as ScrollBar).custom_step = scroll_bar.custom_step
 				range.step = scroll_bar.step
 			elif range is Slider:
 				range.step = maxf(0.0, scroll_bar.custom_step)

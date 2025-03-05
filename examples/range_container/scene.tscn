@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://blh6r78yy4n4x"]
 
-[ext_resource type="Script" path="res://addons/range_container/range_container.gd" id="1_keqt5"]
+[ext_resource type="Script" uid="uid://b0mb21mp27eyv" path="res://addons/range_container/range_container.gd" id="1_keqt5"]
 [ext_resource type="Texture2D" uid="uid://cuvru6lbda7ps" path="res://examples/range_container/progress.svg" id="2_8du0b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1etd"]
