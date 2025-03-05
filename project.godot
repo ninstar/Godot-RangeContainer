@@ -14,7 +14,7 @@ config/name="RangeContainer"
 config/description="A ScrollContainer that can be controlled by external Range nodes."
 config/tags=PackedStringArray("addon")
 run/main_scene="res://examples/range_container/scene.tscn"
-config/features=PackedStringArray("4.3")
+config/features=PackedStringArray("4.4")
 config/icon="res://icon.png"
 
 [editor_plugins]
